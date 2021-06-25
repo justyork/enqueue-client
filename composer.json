@@ -9,7 +9,7 @@
         "email": "yorkshp@gmail.com"
     },
     "require": {
-        "php": ">=7.2.5",
+        "php": "^7.3|^8.0",
         "enqueue/rdkafka": "^0.10.9",
         "enqueue/laravel-queue": "^0.10.4"
     },
