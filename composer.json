@@ -3,7 +3,7 @@
     "type": "library",
     "description": "DI adapter for php-enqueue",
     "license": ["MIT"],
-    "version": "1.0.0",
+    "version": "1.0.6",
     "author": {
         "name": "Iurii Shpynev",
         "email": "yorkshp@gmail.com"

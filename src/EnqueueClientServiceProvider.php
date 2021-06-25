@@ -2,9 +2,7 @@
 
 namespace Justyork\EnqueueClient;
 
-use Enqueue\RdKafka\RdKafkaContext;
 use Illuminate\Support\ServiceProvider;
-use Interop\Queue\ConnectionFactory;
 use Interop\Queue\Context;
 
 class EnqueueClientServiceProvider extends ServiceProvider
@@ -33,6 +31,6 @@ class EnqueueClientServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        //
+        $this->publishes([__DIR__.'/config/enqueue.php' => config_path('enqueue.php')], 'config');
     }
 }
