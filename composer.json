@@ -1,11 +1,17 @@
 {
     "name": "justyork/enqueue-client",
-    "author": {
-        "email": "yorkshp@gmail.com",
-        "name": "Iurii Shpynev"
-    },
+    "type": "library",
+    "description": "DI adapter for php-enqueue",
+    "license": ["MIT"],
     "version": "1.0.0",
-    "dependencies": {
-
-    }
+    "author": {
+        "name": "Iurii Shpynev",
+        "email": "yorkshp@gmail.com"
+    },
+    "require": {
+        "php": ">=7.2.5",
+        "enqueue/rdkafka": "^0.10.9",
+        "enqueue/laravel-queue": "^0.10.4"
+    },
+    "minimum-stability": "dev"
 }
