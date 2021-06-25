@@ -27,14 +27,14 @@ return [
 
 ##Inject in the constructor
 
-####PHP 8
+###PHP 8
 ```injectablephp
 public function __construct(protected EnqueueContextClient $context)
 {
 }
 ```
 
-####PHP 7.x
+###PHP 7.x
 ```injectablephp
 protected EnqueueContextClient $context;
 
