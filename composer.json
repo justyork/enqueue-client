@@ -13,5 +13,10 @@
         "enqueue/rdkafka": "^0.10.9",
         "enqueue/laravel-queue": "^0.10.4"
     },
+    "autoload": {
+        "psr-4": {
+            "Justyork\\EnqueueClient\\": "./src"
+        }
+    },
     "minimum-stability": "dev"
 }
