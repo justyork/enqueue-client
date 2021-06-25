@@ -1,0 +1,11 @@
+{
+    "name": "enqueue-client",
+    "author": {
+        "email": "yorkshp@gmail.com",
+        "name": "Iurii Shpynev"
+    },
+    "version": "1.0.0",
+    "dependencies": {
+
+    }
+}
