@@ -14,7 +14,7 @@ return [
                 'sasl.password' => env('KAFKA_PASSWORD'),
                 'security.protocol' => env('KAFKA_PROTOCOL'),
             ],
-            'factory' => Enqueue\RdKafka\RdKafkaContext::class
+            'class' => Enqueue\RdKafka\RdKafkaContext::class
         ]
     ]
 ];
