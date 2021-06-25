@@ -25,7 +25,7 @@ return [
 ```
 
 
-##I nject in the constructor
+## Inject in the constructor
 
 #### PHP 8
 ```injectablephp
