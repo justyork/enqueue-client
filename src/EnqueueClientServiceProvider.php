@@ -2,7 +2,7 @@
 
 namespace Justyork\EnqueueClient;
 
-use Justyork\Console\ConsumeMessages;
+use Justyork\EnqueueClient\Console\ConsumeMessages;
 use Illuminate\Support\ServiceProvider;
 use Interop\Queue\Context;
 

@@ -1,6 +1,6 @@
 <?php
 
-namespace Justyork\Console;
+namespace Justyork\EnqueueClient\Console;
 
 use Illuminate\Console\Command;
 use Justyork\EnqueueClient\EnqueueContextClient;
