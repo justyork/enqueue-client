@@ -47,7 +47,7 @@ class ConsumeMessages extends Command
         while (true) {
             $message = $consumer->receive();
             $messageBody = $message->getBody();
-            echo "-- Receive new message -- {$messageBody} \n";
+            echo "-- Receive new message -- \n";
 
             if (is_string($messageBody)) {
                 $messageBody = json_decode($messageBody, true);
@@ -56,7 +56,7 @@ class ConsumeMessages extends Command
             if (($messageBody['event'] ?? false) && ($eventsMap[$messageBody['event']] ?? false)) {
                 echo "-- Dispatch event {$messageBody['event']} --\n";
                 $eventClassName = $eventsMap[$messageBody['event']];
-                $eventClassName::dispach($messageBody);
+                $eventClassName::dispatch($messageBody);
             }
 
             $consumer->acknowledge($message);
