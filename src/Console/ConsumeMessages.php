@@ -43,11 +43,18 @@ class ConsumeMessages extends Command
 
         $eventsMap = config('events_map');
 
+        echo "-- Start listening --";
         while (true) {
             $message = $consumer->receive();
+            echo "-- Receive new message --";
             $messageBody = $message->getBody();
 
-            if ($eventsMap[$messageBody['event']] ?? false) {
+            if (is_string($messageBody)) {
+                $messageBody = json_decode($messageBody, true);
+            }
+
+            if (($messageBody['event'] ?? false) && ($eventsMap[$messageBody['event']] ?? false)) {
+                echo "-- Dispatch event ${$messageBody['event']} --";
                 $eventClassName = $eventsMap[$messageBody['event']];
                 $eventClassName::dispach($messageBody);
             }
