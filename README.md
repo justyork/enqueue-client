@@ -1,9 +1,15 @@
 # Enqueue client
 
-## Config
+### Publish configs
 
 ```injectablephp
-// ./config/enqueue.php
+artisan vendor:publish --provider="Justyork\EnqueueClient\EnqueueClientServiceProvider"
+```
+
+
+## Config
+```injectablephp
+// ./config/enqueue_client.php
 return [
     'transports' => [
         'default' => 'rdkafka',
@@ -22,6 +28,11 @@ return [
         ]
     ]
 ];
+```
+```injectablephp
+// ./config/events_map.php
+'event_name' => Event::class
+
 ```
 
 
@@ -59,12 +70,5 @@ $this->context->createProducer()->send($topic, $message);
 
 ### Consume
 ```injectablephp
-$topic = $this->context->createTopic('default');
-$consumer = $this->context->createConsumer($topic);
-
-while (true) {
-    $message = $consumer->receive();
-    // do something
-    $consumer->acknowledge($message);
-}
+run consume:events [topickname]
 ```
