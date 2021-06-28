@@ -54,7 +54,7 @@ class ConsumeMessages extends Command
             }
 
             if (($messageBody['event'] ?? false) && ($eventsMap[$messageBody['event']] ?? false)) {
-                echo "-- Dispatch event ${$messageBody['event']} --\n";
+                echo "-- Dispatch event {$messageBody['event']} --\n";
                 $eventClassName = $eventsMap[$messageBody['event']];
                 $eventClassName::dispach($messageBody);
             }
